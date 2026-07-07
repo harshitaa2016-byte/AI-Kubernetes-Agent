@@ -43,17 +43,34 @@ Build an AI-powered Kubernetes troubleshooting platform that can:
 +----------------------------------------------------------+
 |                  AI Kubernetes Agent                     |
 |----------------------------------------------------------|
-| Responsibilities:                                        |
-| - Analyze logs, events and cluster state                 |
-| - Identify root cause                                    |
-| - Recommend fixes                                        |
-|                                                          |
-| Components:                                              |
-| 1. Prompt Builder                                        |
-| 2. LLM Reasoning Layer                                   |
-| 3. Root Cause Analyzer                                   |
-| 4. Fix Recommendation Engine                             |
-| 5. Confidence Scoring                                    |
+|  Responsibility:                                            │
+│ - Understand Kubernetes failures                           │
+│ - Correlate logs + events + deployment state               │
+│ - Identify root cause                                      │
+│ - Recommend fixes                                          │
+│                                                            │
+│ Components:                                                │
+│                                                            │
+│  1. Prompt Builder                                         │
+│     - Convert investigation data into LLM prompt           │
+│                                                            │
+│  2. LLM Reasoning Layer                                    │
+│     - Uses OpenRouter API Key from InsForge                │
+│     - Supports models like:                                │
+│       - Claude                                              │
+│       - GPT                                                 │
+│       - DeepSeek                                            │
+│                                                            │
+│  3. Root Cause Analyzer                                    │
+│     - Detect primary issue                                 │
+│     - Correlate signals                                    │
+│                                                            │
+│  4. Fix Recommendation Engine                              │
+│     - Suggest kubectl fixes                                │
+│     - Recommend YAML updates                               │
+│                                                            │
+│  5. Confidence Scoring                                     │
+│     - Confidence % for diagnosis |
 +----------------------------------------------------------+
                  Investigation Result
                           | 

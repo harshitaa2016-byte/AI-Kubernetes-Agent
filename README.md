@@ -105,6 +105,7 @@ Build an AI-powered Kubernetes troubleshooting platform that can:
 ```
 
 Supported Kubernetes Problems:
+
 CrashLoopBackOff
 ImagePullBackOff
 OOMKilled
